@@ -6,10 +6,12 @@ const amount = input.addEventListener("input", (event) => {
 function createBoxes(amount){
   const boxes = document.querySelector('div#boxes')
 for(i=0; i<amount; i+=1){
-  boxes.append(document.createElement(div))
+  const div = document.createElement(div);
+  div.size = (30 + i*10) +'px' ;
+  boxes.append(div);
 };
 }
-
+console.log(createBoxes())
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
