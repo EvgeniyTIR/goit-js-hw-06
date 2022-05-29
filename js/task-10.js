@@ -5,7 +5,7 @@ const amount = input.addEventListener("input", (event) => {
 
 function createBoxes(amount){
   const boxes = document.querySelector('div#boxes')
-for(i=0; i<amount; i+=1){
+for(let i = 0; i < amount; i+=1){
   const div = document.createElement(div);
   div.size = (30 + i*10) +'px' ;
   boxes.append(div);
