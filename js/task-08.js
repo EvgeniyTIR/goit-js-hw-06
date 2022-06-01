@@ -9,11 +9,13 @@ function handleSubmit(event) {
   const {
     elements: { email, password }
   } = event.currentTarget;
-;  if (email.value === "" || password.value === "") {
+
+  if (email.value === "" || password.value === "") {
     return alert("Please fill in all the fields!");
 }
-logins.push({email:email.value,password:password.value})
-console.log(logins);
-  console.log(`Login: ${email.value}, Password: ${password.value}`);
+
+logins.push({email: email.value, password: password.value})
+  //console.log(`Login: ${email.value}, Password: ${password.value}`);
+  console.log(logins);  
   event.currentTarget.reset();
 }
